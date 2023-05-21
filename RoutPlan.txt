@@ -1,0 +1,9 @@
+Route--------------------------> Content
+
+/ -----------------------------> Starting Page (show featured events)
+
+/events -----------------------> Events Page (show all Events)
+
+/events/<:Id> -----------------> Event Detail Page (show selected events)
+
+/events/..slug ---------------> Filter Event page (show events on filter)

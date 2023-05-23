@@ -5,7 +5,7 @@ const DUMMY_EVENTS = [
 		description:
 			'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
 		location: 'Somestreet 25, 12345 San Somewhereo',
-		date: '2021-05-12',
+		date: '2023-07-25',
 		image: 'images/coding-event.jpg',
 		isFeatured: false,
 	},
@@ -15,7 +15,7 @@ const DUMMY_EVENTS = [
 		description:
 			"We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
 		location: 'New Wall Street 5, 98765 New Work',
-		date: '2021-05-30',
+		date: '2023-06-04',
 		image: 'images/introvert-event.jpg',
 		isFeatured: true,
 	},
@@ -25,9 +25,29 @@ const DUMMY_EVENTS = [
 		description:
 			'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
 		location: 'My Street 12, 10115 Broke City',
-		date: '2022-04-10',
+		date: '2024-04-12',
 		image: 'images/extrovert-event.jpg',
 		isFeatured: true,
+	},
+	{
+		id: 'e4',
+		title: 'Basics of Development',
+		description:
+			'After graduating from Programming for everone, this event teaches about web development. Taking your code and making it visible to everyone!',
+		location: 'Somestreet 24, 32091 Compton',
+		date: '2023-03-13',
+		image: 'images/coding-event.jpg',
+		isFeatured: false,
+	},
+	{
+		id: 'e5',
+		title: 'Closing the Deal',
+		description:
+			'Just as important as your coding skills. Closing deals allows your passions to be your exit out of the rat race.',
+		location: 'My Street 12, 10115 Broke City',
+		date: '2024-07-25',
+		image: 'images/introvert-event.jpg',
+		isFeatured: false,
 	},
 ];
 
@@ -40,6 +60,7 @@ export function getAllEvents() {
 }
 
 export function getFilteredEvents(dateFilter) {
+	console.log('filterEvents called dateFilter: ' + dateFilter);
 	const { year, month } = dateFilter;
 
 	let filteredEvents = DUMMY_EVENTS.filter((event) => {
@@ -49,6 +70,7 @@ export function getFilteredEvents(dateFilter) {
 		);
 	});
 
+	console.log('filterEvents returning filteredEevents: ' + filteredEvents);
 	return filteredEvents;
 }
 
